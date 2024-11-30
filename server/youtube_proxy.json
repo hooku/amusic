@@ -1,0 +1,68 @@
+{
+  "urls": [
+    "https://www.youtube.com/channel/UC2QpdWej8WRwJZiyIUr0W6A/videos", // 吴建民
+    "https://www.youtube.com/channel/UCX8KQ5xQlm0MnZkmHO7CBDw/videos", // 五岳散人
+    "https://www.youtube.com/channel/UC1mx_wcSHtfpLk5N_zY0TRg/videos", // Leonard
+    "https://www.youtube.com/channel/UCzYYzigb1vXR0GQXXBja2kg/videos", // 多伦多方脸
+    "https://www.youtube.com/channel/UCpG17Giz_CLK0jWLPG9O5Kw/videos", // 薇羽看世間
+    //"https://www.youtube.com/channel/UCBKDRq35-L8xev4O7ZqBeLg/videos", // 王志安
+    "https://www.youtube.com/channel/UCn9_KbNANeyYREePe8YA2DA/videos", // 财经冷眼
+    //"https://www.youtube.com/channel/UCG6ADYIl4GxaQib1HKIsRNg/videos", // 大康有话说
+    "https://www.youtube.com/channel/UCk89pEd76qutMB08hVSY49Q/videos", // 希望之聲TV
+    "https://www.youtube.com/channel/UCLwNgVVM5t88jT8HAHnRCSg/videos", // 安迪聲 採集民間言傳,展現真實世界
+    "https://www.youtube.com/channel/UCcyq3Dtsa-EbuIfwViWbT4Q/videos", // 万维TV
+    "https://www.youtube.com/channel/UCrGSFNEBmCN0rqhATZels2Q/videos", // 公子沈 Mr. Shen
+    "https://www.youtube.com/channel/UCiL5EGUQfROCmRokN2q1LCg/videos", // 说真话的徐某人
+    "https://www.youtube.com/channel/UCtAIPjABiQD3qjlEl1T5VpA/videos", // 文昭談古論今 -Wen Zhao Official
+    "https://www.youtube.com/channel/UCa6ERCDt3GzkvLye32ar89w/videos", // 江峰时刻
+    "https://www.youtube.com/channel/UCThvTxQ-zF_ENso9LD_uHOQ/videos", // 狗哥狗哥DogChinaShow
+    "https://www.youtube.com/channel/UCFYpTQEVykoFV5KSxc91aEg/videos", // 江森哲
+    "https://www.youtube.com/channel/UCwb7avxK-L5vPjMC1ZIGayw/videos", // 陳破空縱論天下
+    "https://www.youtube.com/channel/UCm3Ysfy0iXhGbIDTNNwLqbQ/videos", // 路德社LUDE Media
+    "https://www.youtube.com/channel/UCdbvc-yJ4JQjNGTgFiJIZNA/videos", // 新唐人電視台
+    "https://www.youtube.com/channel/UCs7elJEjfHfLUEZ7HUbUlUw/videos"  // 華爾街電視
+  ],
+  "download_path": "C:\\web\\www\\app\\youtube",
+  "keep_days": 7,
+  "ytdlp_options": {
+    "extract_flat": "discard_in_playlist",
+    "ffmpeg_location": "C:\\Program Files\\ffmpeg",
+    "final_ext": "mp3",
+    "format": "140",
+    "fragment_retries": 5,
+    "ignoreerrors": "only_download",
+    "max_sleep_interval": 5,
+    "outtmpl": {
+      "default": "%(uploader).2s_%(title).6s.%(ext)s"
+    },
+    "playlistend": 2,
+    "postprocessor_args": {
+      "default": [
+        "-ac",
+        "1",
+        "-ar",
+        "11025",
+        "-maxrate",
+        "4k"
+      ],
+      "sponskrub": []
+    },
+    "postprocessors": [
+      {
+        "key": "FFmpegExtractAudio",
+        "nopostoverwrites": false,
+        "preferredcodec": "mp3",
+        "preferredquality": "9"
+      },
+      {
+        "key": "FFmpegConcat",
+        "only_multi_video": true,
+        "when": "playlist"
+      }
+    ],
+    "retries": 5,
+    "sleep_interval": 5,
+    "verbose": true,
+    "no_check_certificate": true
+  }
+}
